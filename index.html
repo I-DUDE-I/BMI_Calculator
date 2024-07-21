@@ -52,8 +52,8 @@
                             <label class="text-center weightLabel" for="weightInput">WEIGHT: </label>
                             <input type="text" value="50" maxlength="3" oninput="weightInput(),check()" class="weightInput" id="weightInput">
                             <select class="weightSelect" onclick="weightInput(),check()" id="weightSelect">
-                                <option selected value="1">kg</option>
-                                <option value="2">lb</option>
+                                <option selected value="1" onclick="check()">kg</option>
+                                <option onclick="check()" value="2">lb</option>
                             </select>
                         </div>
                         <div class="weightDisplay">
@@ -69,8 +69,8 @@
                         <label class="text-center heightLabel" for="heightInput">HEIGHT: </label>
                         <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" class="heightInput" id="heightInput">
                         <select class="heightSelect" onclick="heightInput(),check()" id="heightSelect">
-                            <option selected value="1">cm</option>
-                            <option value="2">ft</option>
+                            <option selected onclick="check()" value="1">cm</option>
+                            <option onclick="check()" value="2">ft</option>
                         </select>
                         <div class="heightDisplay">
                             <img src="./images/height scale.png" alt="">
