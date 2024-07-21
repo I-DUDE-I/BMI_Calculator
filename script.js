@@ -1,13 +1,11 @@
 
 function femaleClick() {
-    // genderImage.innerHTML = `<img src="./images/gender indicator use.png" style="transform: rotate(-45deg);" alt="">`
     document.getElementById("genderImage").style.transform ="rotate(-45deg)"
     document.getElementById("neutralIcon").style.color="grey"
     document.getElementById("maleIcon").style.color="grey"
     document.getElementById("femaleIcon").style.color="white"
 }
 function maleClick(params) {
-    // genderImage.innerHTML = `<img src="./images/gender indicator use.png" style="transform: rotate(45deg);" alt="">`
     document.getElementById("genderImage").style.transform ="rotate(45deg)"
     document.getElementById("neutralIcon").style.color="grey"
     document.getElementById("maleIcon").style.color="white"
@@ -62,6 +60,13 @@ function check() {
     if (bmi<0) {
         document.getElementById("bmiArrow").style.transform = `rotate(${-90}deg)`
         document.getElementById("bmiCircle").style.transform = `rotate(${0}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:red;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:red;">Time to grab a bite!</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Focus on nutrient-dense foods to gain weight gradually. Regular exercise can help build muscle mass.</h3>`
+        document.getElementById("dis2").style.textColor = "yellow"
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
     }
     else if (bmi >= 0 && bmi < 18.5) {
         let angle;
@@ -69,6 +74,13 @@ function check() {
         document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
         document.getElementById("bmiCircle").style.backgroundColor = `yellow`
         document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:red;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:red;">Time to grab a bite!</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Focus on nutrient-dense foods to gain weight gradually. Regular exercise can help build muscle mass.</h3>`
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
+
     }
     else if (bmi >= 18.5 && bmi < 25) {
         let angle;
@@ -76,6 +88,12 @@ function check() {
         document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
         document.getElementById("bmiCircle").style.backgroundColor = `green`
         document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:green;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:green;">Great shape</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Maintain a balanced diet and regular physical activity to sustain overall health.</h3>`
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
     }
     else if (bmi >= 25 && bmi < 30) {
         let angle;
@@ -83,6 +101,12 @@ function check() {
         document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
         document.getElementById("bmiCircle").style.backgroundColor = `orange`
         document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:orange;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:orange;">Time to run!</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Adopt healthy eating habits, increase physical activity, and consider consulting a healthcare professional for guidance.</h3>`
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
 
     }
     else if (bmi >=30 && bmi <40) {
@@ -91,12 +115,22 @@ function check() {
         document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
         document.getElementById("bmiCircle").style.backgroundColor = `red`
         document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:red;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:red;">Time to run!!!</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Focus on gradual weight loss through a combination of diet changes, increased exercise, and professional support.</h3>`
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
     }
     else if (bmi >= 40){
         document.getElementById("bmiArrow").style.transform = `rotate(${180-90}deg)`
         document.getElementById("bmiCircle").style.backgroundColor = `red`
         document.getElementById("bmiCircle").style.transform = `rotate(${180}deg)`
+        bmi = (Math.round(bmi * 100) / 100).toFixed(2)
+        dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`
+        dis2.innerHTML = `<h2 class="dis2" style="color:red;">${bmi}</h2>`
+        dis3.innerHTML = `<h2 class="dis3" style="color:red;">Time to run!!!</h2>`
+        dis4.innerHTML = `<h3 class="text-center dis4">Focus on gradual weight loss through a combination of diet changes, increased exercise, and professional support.</h3>`
+        document.getElementById("dis2").style.backgroundColor = "antiquewhite"
     }
-    // document.getElementById("bmiArrow").style.transform = `rotate(${inputHeight-90}deg)`
-    // document.getElementById("bmiCircle").style.transform = `rotate(${inputHeight}deg)`
 }
