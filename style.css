@@ -190,11 +190,15 @@
     bottom: 0;
 }
 .weight .weightStart{
+    padding-top: 0.5vw;
+    transform: rotate(-7deg);
     color: grey;
     font-size: 1.5vw;
     font-weight: 800;
 }
 .weight .weightEnd{
+    padding-top: 0.5vw;
+    transform: rotate(7deg);
     color: grey;
     font-size: 1.5vw;
     font-weight: 800;
@@ -207,13 +211,53 @@
 
 
 
-
-
-
 .height{
     width: 50%;
     height: 100%;
+    font-size: 1vw;
 }
+.height .header{
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.height .heightLabel{
+    width: 40%;
+    padding-left: 2vw;
+}
+.height .heightInput{
+    border-top-left-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    width: 25%;
+    text-align: center;
+}
+.height .heightSelect{
+    width: 20%;
+    border-top-right-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+}
+.height .heightDisplay{
+    /* border: 1px red solid; */
+    margin-top: 2vw;
+    height: 33vw;
+}
+.heightDisplay img{
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+.height .heightScale{
+    transition: all 1s ease-in-out;
+    width: 20%;
+    position: relative;
+    top: -57.3%;
+    border-top-right-radius: 10% 50%;
+    border-bottom-right-radius: 10% 50%;
+    height: 1%;
+    background-color: rgb(255, 0, 0);
+}
+
+
 
 @media screen and (max-width:500px) {
     .main{
@@ -259,9 +303,11 @@
         font-size: 2vw;
     }
     .weight .weightStart{
+        padding-top: 0.8vw;
         font-size: 3.5vw;
     }
     .weight .weightEnd{
+        padding-top: 0.8vw;
         font-size: 3.5vw;
     }
     .weight .weightMiddle{
@@ -270,6 +316,19 @@
     .weight .triangle{
         height: 2.5vw;
         width: 3.5vw;
+    }
+    .height{
+        font-size: 2vw;
+    }
+    .height .heightDisplay{
+        /* border: 1px red solid; */
+        margin-top: 2vw;
+        height: 50vw;
+    }
+    .heightDisplay img{
+        width: 49%;
+        margin-left: 20%;
+        margin-top: 10%;
     }
 }
 

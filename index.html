@@ -50,10 +50,10 @@
                     <div class="weight gridItem">
                         <div class="header">
                             <label class="text-center weightLabel" for="weightInput">WEIGHT: </label>
-                            <input type="text" value="50" maxlength="3" oninput="weightInput()" class="weightInput" id="weightInput">
+                            <input type="text" value="50" maxlength="3" onchange="weightInput()" class="weightInput" id="weightInput">
                             <select class="weightSelect" id="weightSelect">
                                 <option selected>kg</option>
-                                <option value="1">lbs</option>
+                                <option value="1">lb</option>
                             </select>
                         </div>
                         <div class="weightDisplay">
@@ -65,7 +65,18 @@
                     </div>
                 </div>
                 <div class="height gridItem">
-                    height
+                    <div class="header">
+                        <label class="text-center heightLabel" for="heightInput">HEIGHT: </label>
+                        <input type="text" value="170" maxlength="3" oninput="heightInput()" class="heightInput" id="heightInput">
+                        <select class="heightSelect" id="heightSelect">
+                            <option selected value="1">cm</option>
+                            <option value="2">ft</option>
+                        </select>
+                        <div class="heightDisplay">
+                            <img src="./images/height scale.png" alt="">
+                            <div class="heightScale" id="heightScale"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button class="btn btn-dark checkButton" onclick="CHECK()">Check BMI</button>

@@ -21,3 +21,29 @@ function weightInput() {
     weightStart.innerHTML = `<label class="weightStart">${input - 1}</label>`
     weightEnd.innerHTML = `<label class="weightEnd">${(input*1) + 1}</label>`
 }
+
+function heightInput() {
+    input = document.getElementById("heightInput").value
+    if (document.getElementById("heightSelect").value == 1) {
+        let height
+        height = -5-((65/211.28)*input)
+        if (height<-70){
+            height= -70
+        }
+        else if (height > -7.5) {
+            height = -7.5
+        }
+        document.getElementById("heightScale").style.top = `${height}%`
+    }
+    else if (document.getElementById("heightSelect").value == 2) {
+        let height
+        height = -5-((65/6.93175853)*input)
+        if (height<-70){
+            height= -70
+        }
+        else if (height > -7.5) {
+            height = -7.5
+        }
+        document.getElementById("heightScale").style.top = `${height}%`
+    }
+}
