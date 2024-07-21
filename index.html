@@ -50,10 +50,10 @@
                     <div class="weight gridItem">
                         <div class="header">
                             <label class="text-center weightLabel" for="weightInput">WEIGHT: </label>
-                            <input type="text" value="50" maxlength="3" onchange="weightInput()" class="weightInput" id="weightInput">
-                            <select class="weightSelect" id="weightSelect">
-                                <option selected>kg</option>
-                                <option value="1">lb</option>
+                            <input type="text" value="50" maxlength="3" oninput="weightInput(),check()" class="weightInput" id="weightInput">
+                            <select class="weightSelect" onclick="weightInput(),check()" id="weightSelect">
+                                <option selected value="1">kg</option>
+                                <option value="2">lb</option>
                             </select>
                         </div>
                         <div class="weightDisplay">
@@ -67,8 +67,8 @@
                 <div class="height gridItem">
                     <div class="header">
                         <label class="text-center heightLabel" for="heightInput">HEIGHT: </label>
-                        <input type="text" value="170" maxlength="3" oninput="heightInput()" class="heightInput" id="heightInput">
-                        <select class="heightSelect" id="heightSelect">
+                        <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" class="heightInput" id="heightInput">
+                        <select class="heightSelect" onclick="heightInput(),check()" id="heightSelect">
                             <option selected value="1">cm</option>
                             <option value="2">ft</option>
                         </select>
@@ -79,9 +79,18 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-dark checkButton" onclick="CHECK()">Check BMI</button>
+            <!-- <button class="btn btn-dark checkButton" onclick="CHECK()">Check BMI</button> -->
         </div>
-        <div class="result"></div>
+        <div class="result">
+            <div class="resultDial">
+                <div class="div1" id="bmiCircle">
+                    <div class="div11"></div>
+                </div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <img src="./images/gender indicator use.png" id="bmiArrow" alt="">
+            </div>
+        </div>
     </div>
     
 </body>

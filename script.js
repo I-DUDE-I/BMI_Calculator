@@ -47,3 +47,56 @@ function heightInput() {
         document.getElementById("heightScale").style.top = `${height}%`
     }
 }
+
+function check() {
+    inputHeight = document.getElementById("heightInput").value
+    inputWeight = document.getElementById("weightInput").value
+    if (document.getElementById("heightSelect").value == 2) {
+        inputHeight = inputHeight * 30.48;
+    }
+    if (document.getElementById("weightSelect").value == 2) {
+        inputWeight = inputWeight * 0.453592;
+    }
+    let bmi
+    bmi = (inputWeight*100*100)/(inputHeight**2)
+    if (bmi<0) {
+        document.getElementById("bmiArrow").style.transform = `rotate(${-90}deg)`
+        document.getElementById("bmiCircle").style.transform = `rotate(${0}deg)`
+    }
+    else if (bmi >= 0 && bmi < 18.5) {
+        let angle;
+        angle = (45/18.5)*bmi;
+        document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
+        document.getElementById("bmiCircle").style.backgroundColor = `yellow`
+        document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+    }
+    else if (bmi >= 18.5 && bmi < 25) {
+        let angle;
+        angle = 45 + ((45/(25-18.5))*(bmi-18.5));
+        document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
+        document.getElementById("bmiCircle").style.backgroundColor = `green`
+        document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+    }
+    else if (bmi >= 25 && bmi < 30) {
+        let angle;
+        angle = 90 + ((45/(30-25))*(bmi-25));
+        document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
+        document.getElementById("bmiCircle").style.backgroundColor = `orange`
+        document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+
+    }
+    else if (bmi >=30 && bmi <40) {
+        let angle;
+        angle = 135 + ((45/(40-30))*(bmi-30));
+        document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
+        document.getElementById("bmiCircle").style.backgroundColor = `red`
+        document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
+    }
+    else if (bmi >= 40){
+        document.getElementById("bmiArrow").style.transform = `rotate(${180-90}deg)`
+        document.getElementById("bmiCircle").style.backgroundColor = `red`
+        document.getElementById("bmiCircle").style.transform = `rotate(${180}deg)`
+    }
+    // document.getElementById("bmiArrow").style.transform = `rotate(${inputHeight-90}deg)`
+    // document.getElementById("bmiCircle").style.transform = `rotate(${inputHeight}deg)`
+}
