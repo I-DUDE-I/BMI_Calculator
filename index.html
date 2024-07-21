@@ -50,8 +50,8 @@
                     <div class="weight gridItem">
                         <div class="header">
                             <label class="text-center weightLabel" for="weightInput">WEIGHT: </label>
-                            <input type="text" value="50" maxlength="3" oninput="weightInput(),check()" class="weightInput" id="weightInput">
-                            <select class="weightSelect" onclick="weightInput(),check()" id="weightSelect">
+                            <input type="text" value="50" maxlength="3" oninput="weightInput(),check()" onfocus="check()" class="weightInput" id="weightInput">
+                            <select class="weightSelect" onclick="weightInput(),check()" onchange="check()" id="weightSelect">
                                 <option selected value="1" onclick="check()">kg</option>
                                 <option onclick="check()" value="2">lb</option>
                             </select>
@@ -67,8 +67,8 @@
                 <div class="height gridItem">
                     <div class="header">
                         <label class="text-center heightLabel" for="heightInput">HEIGHT: </label>
-                        <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" class="heightInput" id="heightInput">
-                        <select class="heightSelect" onclick="heightInput(),check()" id="heightSelect">
+                        <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" onfocus="check()" class="heightInput" id="heightInput">
+                        <select class="heightSelect" onclick="heightInput(),check()" onchange="check()" id="heightSelect">
                             <option selected onclick="check()" value="1">cm</option>
                             <option onclick="check()" value="2">ft</option>
                         </select>
