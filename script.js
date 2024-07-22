@@ -86,7 +86,7 @@ function check() {
         let angle;
         angle = 45 + ((45/(25-18.5))*(bmi-18.5));
         document.getElementById("bmiArrow").style.transform = `rotate(${angle-90}deg)`
-        document.getElementById("bmiCircle").style.backgroundColor = `green`
+        document.getElementById("bmiCircle").style.backgroundColor = `rgb(0, 200, 0)`
         document.getElementById("bmiCircle").style.transform = `rotate(${angle}deg)`
         bmi = (Math.round(bmi * 100) / 100).toFixed(2)
         dis1.innerHTML = `<h2 class="dis1">Your BMI is</h2>`

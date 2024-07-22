@@ -67,10 +67,10 @@
                 <div class="height gridItem">
                     <div class="header">
                         <label class="text-center heightLabel" for="heightInput">HEIGHT: </label>
-                        <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" onfocus="check()" class="heightInput" id="heightInput">
-                        <select class="heightSelect" onclick="heightInput(),check()" onchange="check()" id="heightSelect">
-                            <option selected onclick="check()" value="1">cm</option>
-                            <option onclick="check()" value="2">ft</option>
+                        <input type="text" value="170" maxlength="3" oninput="heightInput(),check()" onfocus="check(),heightInput()" class="heightInput" id="heightInput">
+                        <select class="heightSelect" onclick="heightInput(),check()" onchange="check(),heightInput()" id="heightSelect">
+                            <option selected onclick="check(),heightInput()" value="1">cm</option>
+                            <option onclick="check(),heightInput()" value="2">ft</option>
                         </select>
                         <div class="heightDisplay">
                             <img src="./images/height scale.png" alt="">

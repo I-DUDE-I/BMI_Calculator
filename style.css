@@ -420,7 +420,7 @@
         height: 70vw;
     }
     .result .dis1{
-        color:orange;
+        color:red;
         font-size: 4vw;
     }
     .result .dis2{
@@ -434,6 +434,8 @@
     }
     .result .dis4{
         font-size: 2vw;
+        color: rgb(0, 255, 0);
+        color: rgb(0, 190, 0);
     }
 }
 
